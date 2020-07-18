@@ -1,3 +1,5 @@
+## Django AdminLTE panel
+### Adapted [AdminLTE](https://adminlte.io) templates for django
 ### Django project in Docker container with PostgreSql and Nginx
 
 ##### [Project](https://github.com/bandirom/django_layout "django_layout")  without docker containers.
