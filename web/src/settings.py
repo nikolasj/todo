@@ -10,7 +10,6 @@ SITE_ID = int(os.environ.get("SITE_ID", default=1))
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
-
 INSTALLED_APPS = [
     'app.apps.AppConfig',
     'adminlte.apps.AdminlteConfig',
@@ -25,6 +24,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'django_summernote',
     'rest_framework',
+    'rest_framework.authtoken',
     'defender',
     'channels',
     'allauth',
@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
+    'todo.apps.TodoConfig',
 
 ]
 
@@ -116,7 +117,6 @@ CHANNEL_LAYERS = {
     },
 }
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
@@ -129,7 +129,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')

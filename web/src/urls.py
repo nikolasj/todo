@@ -20,6 +20,7 @@ urlpatterns = [
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
     path('accounts/', include('allauth.urls')),
     path('api-auth/', include('rest_framework.urls')),
+    path('todo/', include('todo.urls')),
     path('summernote/', include('django_summernote.urls')),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
